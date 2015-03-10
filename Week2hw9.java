@@ -14,11 +14,10 @@ class Circle
 	{
 		return 3.14 * r * r;
 	}
-	double Pie(int degree)
+	double perimeter()
 	{
-		return 3.14 * r * r * degree / 360;
+		return 3.14 * r * 2;
 	}
-	
 }
 class Oval extends Circle
 {
@@ -32,9 +31,9 @@ class Oval extends Circle
 	{
 		return 3.14 * r * r2;
 	}
-	double Pie(int degree)
+	double perimeter()
 	{
-		return 3.14 * r * r2 * degree / 360;
+		return 2 * 3.14 * r2 + 4 * (r - r2);
 	}
 }
 class Week2hw9
@@ -50,7 +49,7 @@ class Week2hw9
 		Scanner s = new Scanner(System.in);
 		while(true)
 		{
-			System.out.println("請輸入 1)新增橢圓 2)查看所有橢圓 3)查看扇形面積 -1)離開 : ");
+			System.out.println("請輸入 1)新增橢圓 2)查看所有橢圓 3)查看橢圓周長及面積 -1)離開 : ");
 			option = s.nextInt();
 			switch(option)
 			{
@@ -95,17 +94,8 @@ class Week2hw9
 					num = s.nextInt();
 					if(num <= o.size() && num > 0)
 					{
-						System.out.println("請輸入角度 : ");
-						d = s.nextInt();
-						if(d > 0 && d <= 360)
-						{
-							System.out.println("編號\t半長軸\t半短軸\t角度\t扇形面積");
-							System.out.println(num + "\t" + o.get(num - 1).r + "\t" + o.get(num - 1).r2 + "\t" + d + "\t" + nf.format(o.get(num - 1).Pie(d)));
-						}
-						else
-						{
-							System.out.println("角度錯誤!");
-						}
+						System.out.println("編號\t半長軸\t半短軸\t周長\t面積");
+						System.out.println(num + "\t" + o.get(num - 1).r + "\t" + o.get(num - 1).r2 + "\t" + nf.format(o.get(num - 1).perimeter()) + "\t" + nf.format(o.get(num - 1).area()));
 					}
 					else
 					{
