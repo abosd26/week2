@@ -14,7 +14,7 @@ class Date
 	{
 		if((year <= 0) || (month < 1 || month > 12) || (day < 1 || day > 31))
 		{
-			System.out.println("日期格式錯誤!");
+			System.out.println("date format incorrect!");
 		}
 		else
 		{
@@ -22,34 +22,34 @@ class Date
 			{
 				if(day > 30)
 				{
-					System.out.println("日期格式錯誤!");
+					System.out.println("date format incorrect!");
 				}
 				else
 				{
-					System.out.println("日期格式正確!");
-					System.out.println("西元" + year + "年" + month + "月" + day + "日");
+					System.out.println("CORRECT!");
+					System.out.println("A.D." + year + "/" + month + "/" + day);
 				}
 			}
 			else if(month == 2)
 			{
 				if((year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) && day > 29)
 				{
-					System.out.println("日期格式錯誤!");
+					System.out.println("date format incorrect!");
 				}
 				else if((year % 400 != 0 && (year % 4 != 0 || year % 100 == 0)) && day > 28)
 				{
-					System.out.println("日期格式錯誤!");
+					System.out.println("date format incorrect!");
 				}
 				else
 				{
-					System.out.println("日期格式正確!");
-					System.out.println("西元" + year + "年" + month + "月" + day + "日");
+					System.out.println("CORRECT!");
+					System.out.println("A.D." + year + "/" + month + "/" + day);
 				}
 			}
 			else
 			{
-				System.out.println("日期格式正確!");
-				System.out.println("西元" + year + "年" + month + "月" + day + "日");
+				System.out.println("CORRECT!");
+				System.out.println("A.D." + year + "/" + month + "/" + day);
 			}
 
 		}
@@ -60,7 +60,7 @@ class Date
 		Scanner s = new Scanner(System.in);
 		try
 		{
-			System.out.println("請輸入年月日(西元) : ");
+			System.out.println("input year(A.D.) month day : ");
 			y = s.next();
 			m = s.next();
 			d = s.next();
