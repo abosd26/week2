@@ -10,7 +10,7 @@ class Week2hw2
 			sum += i;
 		}
 		average = sum / num.length;
-		System.out.println("Á`©M : " + sum);
-		System.out.println("¥­§¡ : " + average);
+		System.out.println("sum : " + sum);
+		System.out.println("average : " + average);
 	}
 }
