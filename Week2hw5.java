@@ -7,7 +7,7 @@ class Week2hw5
 	{
 		int year, count = 0;
 		Scanner s = new Scanner(System.in);
-		System.out.println("請輸入年份(西元) : ");
+		System.out.println("input year(A.D.) : ");
 		year = s.nextInt();
 		for(int i = 1; i < year; i++)
 		{
